@@ -1,0 +1,14 @@
+{
+  "name": "AMC",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": " index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-ws": "^5.0.2",
+    "websocket": "^1.0.34"
+  }
+}
