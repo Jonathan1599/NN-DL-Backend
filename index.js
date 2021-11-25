@@ -1,25 +1,52 @@
-const express = require('express');
-const expressws = require('express-ws');
-
+const express = require("express");
+const expressws = require("express-ws");
+const cors = require("cors");
+const path = require("path");
+const httpServer = require("http").createServer();
+const io = require("socket.io")(httpServer, {
+  cors: { origin: "*", methods: ["GET", "POST"] },
+});
 
 const app = express();
+httpServer.listen(9000);
+
+app.use(express.static("public"));
 
 const expressWs = expressws(app);
 
 app.use(express.json());
+app.use(cors());
+app.options("*", cors());
 
-app.get('/', ( req ,res ,next) => {
-    res.send("Hi there 🚀");
+app.get("/", (req, res, next) => {
+  res.sendFile(path.join(__dirname, "public/index"));
 });
 
-app.ws('/', function(ws, req) {
-    ws.on('message', function(msg) {
-      console.log(msg);
-    });
-    console.log('socket', req.testing);
+app.get("/station/goa", (req, res, next) => {
+  res.sendFile(path.join(__dirname, "public/station_goa.html"));
+});
+
+app.get("/station/patna", (req, res, next) => {
+  res.sendFile(path.join(__dirname, "public/station_patna.html"));
+});
+
+app.ws("/", function (ws, req) {
+  ws.on("message", function (msg) {
+    console.log(msg);
+    io.emit("goa", JSON.parse(msg));
   });
+  console.log("socket", req.testing);
+});
+
+app.ws("/patna", function (ws, req) {
+  ws.on("message", function (msg) {
+    console.log("Patna");
+    console.log(msg);
+    io.emit("patna", JSON.parse(msg));
+  });
+  console.log("socket", req.testing);
+});
 
 app.listen(3000, () => {
-  
-  console.log(`Server listening on port 3000`)
-})
+  console.log(`Server listening on port 3000`);
+});
