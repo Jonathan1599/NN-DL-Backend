@@ -20,7 +20,7 @@ app.options("*", cors());
 
 
 
-app.get("/", (req, res, next) => {
+app.get("/test", (req, res, next) => {
   res.sendFile(path.join(__dirname, "public/station_goa.html"));
 });
 
