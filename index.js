@@ -33,7 +33,14 @@ app.get("/station/patna", (req, res, next) => {
 app.ws("/", function (ws, req) {
   ws.on("message", function (msg) {
     console.log(msg);
+    try {
     io.emit("goa", JSON.parse(msg));
+    }
+
+    catch(e){
+      console.log(e);
+    }
+    
   });
   console.log("socket", req.testing);
 });
@@ -42,9 +49,14 @@ app.ws("/patna", function (ws, req) {
   ws.on("message", function (msg) {
     console.log("Patna");
     console.log(msg);
+    try {
     io.emit("patna", JSON.parse(msg));
+    }
+    catch(e){
+      console.log(e);
+    }
   });
-  console.log("socket", req.testing);
+    console.log("socket", req.testing);
 });
 
 app.listen(3000, () => {
