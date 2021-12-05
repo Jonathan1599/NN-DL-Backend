@@ -33,17 +33,27 @@ var chart1 = new Chart(ctx, {
       ],
     },
   },
+},
+{
+  responsive: true
 });
 
 let socket = io.connect("http://18.222.131.162:9000");
 
 socket.on("data", (data) => {
   console.log(data);
+  if(values.length > 30){
+    values = [];
+    labels = [];
+  }
   values.push(data.value);
   labels.push(labels[labels.length - 1] + 1);
   chart1.update();
 });
 
+setInterval(function() {
+  chart1.removeData();
+}, 3000);
 // const ctx = document.getElementById('myChart');
 // const myChart = new Chart(ctx, {
 //     type: 'line',
