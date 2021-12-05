@@ -1,49 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
-    <script src="/station_goa_script.js" defer></script> 
-    <title>NN-DL-Test</title>
-    <link rel="stylesheet" href="/station.css">
-  </head>
-  <body>
-      <h1> Waveform test </h1>
-      <div id = "graph">
-        <canvas id="myChart" style =  "width : 50 ; height : 50"></canvas>
-      </div>
-      <div>
-        <table>
-          <tr>
-            <th>BPM</th>
-            <th>age</th>
-            <th>sex</th>
-            <th>chest_pain_type</th>
-            <th>resting_blood_pressure</th>
-            <th>cholesterol</th>
-            <th>fasting_blood_sugar</th>
-            <th>rest_ecg_type</th>
-            <th>max_heart_rate_achieved</th>
-            <th>max_heart_rate_achieved</th>
-            <th>exercise_induced_angina</th>
-            <th>st_depression</th>
-            <th>st_slope_type</th>
-            <th>num_major_vessels</th>
-            <th>thalassemia_type</th>
-          </tr>
-          <tr>
-            <td>Alfreds Futterkiste</td>
-            <td>Maria Anders</td>
-            <td>Germany</td>
-          </tr>
-          <tr>
-            <td>Centro comercial Moctezuma</td>
-            <td>Francisco Chang</td>
-            <td>Mexico</td>
-          </tr>
-        </table> 
-      </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script src="https://cdn.socket.io/3.1.3/socket.io.min.js"
+    integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh"
+    crossorigin="anonymous"></script>
+  <script src="/station_goa_script.js" defer></script>
+  <title>NN-DL-Test</title>
+  <link rel="stylesheet" href="/station.css">
+</head>
+
+<body>
+  <h1> Waveform test </h1>
+  <div id="graph">
+    <canvas id="myChart" style="width : 50 ; height : 50"></canvas>
+  </div>
+  <div id="ip_table">
+    <table>
+      <tr>
+        <th class="tbl">BPM</th>
+        <th class="tbl">age</th>
+        <th class="tbl">sex</th>
+        <th class="tbl">chest_pain_type</th>
+        <th class="tbl">resting_blood_pressure</th>
+        <th class="tbl">cholesterol</th>
+        <th class="tbl">fasting_blood_sugar</th>
+        <th class="tbl">rest_ecg_type</th>
+        <th class="tbl">max_heart_rate_achieved</th>
+        <th class="tbl">exercise_induced_angina</th>
+        <th class="tbl">st_depression</th>
+        <th class="tbl">st_slope_type</th>
+        <th class="tbl">num_major_vessels</th>
+        <th class="tbl">thalassemia_type</th>
+      </tr>
+      <tr>
+        
+        <td><input type="text"></td>
+        <td><select name="gender" id="gender">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </td>
+        <td><select name="gender" id="gender">
+            <option>asymptomatic</option>
+            <option>atypical angina</option>
+            <option>non-anginal pain</option>
+            <option>typical angina</option>
+          </select>
+        </td>
+        <td><input type="text"></td>
+        <td><input type="text" class="cholesterol"></td>
+        <td><select name="gender" id="gender">
+            <option>yes</option>
+            <option>no</option>
+          </select>
+        </td>
+        <td><select name="rest_ecg_type" id="rest_ecg_type">
+            <option>left ventricular hypertrophy</option>
+            <option>normal</option>
+            <option>ST-T wave abnormality</option>
+          </select>
+        </td>
+        <td><input type="text" class="max_heart_rate_achieved"></td>
+        <td><select name="exercise_induced_angina" id="exercise_induced_angina">
+            <option>yes</option>
+            <option>no</option>
+          </select>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+</body>
 
 </html>
