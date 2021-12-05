@@ -17,59 +17,100 @@
   <div id="graph">
     <canvas id="myChart" style="width : 50 ; height : 50"></canvas>
   </div>
-  <div id="ip_table">
-    <table>
+  <div id="div_table">
+    <table class = "table">
       <tr>
         <th class="tbl">BPM</th>
-        <th class="tbl">age</th>
-        <th class="tbl">sex</th>
-        <th class="tbl">chest_pain_type</th>
-        <th class="tbl">resting_blood_pressure</th>
-        <th class="tbl">cholesterol</th>
-        <th class="tbl">fasting_blood_sugar</th>
-        <th class="tbl">rest_ecg_type</th>
-        <th class="tbl">max_heart_rate_achieved</th>
-        <th class="tbl">exercise_induced_angina</th>
-        <th class="tbl">st_depression</th>
-        <th class="tbl">st_slope_type</th>
-        <th class="tbl">num_major_vessels</th>
-        <th class="tbl">thalassemia_type</th>
+        <td><input type="text"></td>
       </tr>
       <tr>
-        
+        <th class="tbl">age</th>
         <td><input type="text"></td>
-        <td><select name="gender" id="gender">
-            <option>Male</option>
-            <option>Female</option>
-          </select>
-        </td>
-        <td><select name="gender" id="gender">
-            <option>asymptomatic</option>
-            <option>atypical angina</option>
-            <option>non-anginal pain</option>
-            <option>typical angina</option>
-          </select>
-        </td>
-        <td><input type="text"></td>
-        <td><input type="text" class="cholesterol"></td>
-        <td><select name="gender" id="gender">
-            <option>yes</option>
-            <option>no</option>
-          </select>
-        </td>
-        <td><select name="rest_ecg_type" id="rest_ecg_type">
-            <option>left ventricular hypertrophy</option>
-            <option>normal</option>
-            <option>ST-T wave abnormality</option>
-          </select>
-        </td>
-        <td><input type="text" class="max_heart_rate_achieved"></td>
-        <td><select name="exercise_induced_angina" id="exercise_induced_angina">
-            <option>yes</option>
-            <option>no</option>
-          </select>
-        </td>
       </tr>
+        <th class="tbl">sex</th>
+        <td><select name="gender" id="gender">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+        <th class="tbl">chest_pain_type</th>
+        <td><select name="gender" id="gender">
+          <option>asymptomatic</option>
+          <option>atypical angina</option>
+          <option>non-anginal pain</option>
+          <option>typical angina</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <th class="tbl">resting_blood_pressure</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+        <th class="tbl">cholesterol</th>
+        <td><input type="text" class="cholesterol"></td>
+      </tr>
+      <tr>
+        <th class="tbl">fasting_blood_sugar</th>
+        <td><select name="gender" id="gender">
+          <option>yes</option>
+          <option>no</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <th class="tbl">rest_ecg_type</th>
+        <td><select name="rest_ecg_type" id="rest_ecg_type">
+          <option>left ventricular hypertrophy</option>
+          <option>normal</option>
+          <option>ST-T wave abnormality</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <th class="tbl">max_heart_rate_achieved</th>
+        <td><input type="text" class="max_heart_rate_achieved"></td>
+      </tr>
+      <tr>
+        <th class="tbl">exercise_induced_angina</th>
+        <td><select name="exercise_induced_angina" id="exercise_induced_angina">
+          <option>yes</option>
+          <option>no</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <th class="tbl">st_depression</th>
+        <td><input type="text" class="st_depression"></td>
+      </tr>
+      <tr>
+        <th class="tbl">st_slope_type</th>
+        <td><select name="st_slope_type" id="st_slope_type">
+          <option>downsloping</option>
+          <option>flat</option>
+          <option>upsloping</option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <th class="tbl">num_major_vessels</th>
+        <td><input type="text" class="num_major_vessels"></td>
+      </tr>
+      <tr>
+        <th class="tbl">thalassemia_type</th>
+        <td><select name="thalassemia_type" id="thalassemia_type">
+          <option>nothing</option>
+          <option>fixed defect</option>
+          <option>normal</option>
+          <option>reversable defect</option>
+        </select>
+      </td>
+      </tr>
+      
+    </tr>
+      
 
     </table>
   </div>
