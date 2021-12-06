@@ -24,6 +24,10 @@ app.get("/test", (req, res, next) => {
   res.sendFile(path.join(__dirname, "public/station_goa.html"));
 });
 
+app.get("/", (req, res, next) => {
+  res.redirect("/test");
+});
+
 
 app.ws("/", function (ws, req) {
   ws.on("message", function (msg) {
