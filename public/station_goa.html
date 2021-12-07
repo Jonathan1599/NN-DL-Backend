@@ -21,14 +21,14 @@
     <table class = "table">
       <tr>
         <th class="tbl">BPM</th>
-        <td><input type="text"></td>
+        <td><input type="text" id = "bpm"></td>
       </tr>
       <tr>
         <th class="tbl">age</th>
-        <td><input type="text"></td>
+        <td><input type="text" id = "age"></td>
       </tr>
         <th class="tbl">sex</th>
-        <td><select name="gender" id="gender">
+        <td><select name="sex" id="sex">
           <option>Male</option>
           <option>Female</option>
         </select>
@@ -36,8 +36,7 @@
     </tr>
     <tr>
         <th class="tbl">chest_pain_type</th>
-        <td><select name="gender" id="gender">
-          <option>asymptomatic</option>
+        <td><select name="chest_pain_type" id="chest_pain_type">
           <option>atypical angina</option>
           <option>non-anginal pain</option>
           <option>typical angina</option>
@@ -46,15 +45,15 @@
       </tr>
       <tr>
         <th class="tbl">resting_blood_pressure</th>
-        <td><input type="text"></td>
+        <td><input type="text" id = "resting_blood_pressure"></td>
       </tr>
       <tr>
         <th class="tbl">cholesterol</th>
-        <td><input type="text" class="cholesterol"></td>
+        <td><input type="text" id="cholesterol"></td>
       </tr>
       <tr>
         <th class="tbl">fasting_blood_sugar</th>
-        <td><select name="gender" id="gender">
+        <td><select name="fasting_blood_sugar" id="fasting_blood_sugar">
           <option>yes</option>
           <option>no</option>
         </select>
@@ -65,13 +64,12 @@
         <td><select name="rest_ecg_type" id="rest_ecg_type">
           <option>left ventricular hypertrophy</option>
           <option>normal</option>
-          <option>ST-T wave abnormality</option>
         </select>
       </td>
       </tr>
       <tr>
         <th class="tbl">max_heart_rate_achieved</th>
-        <td><input type="text" class="max_heart_rate_achieved"></td>
+        <td><input type="text" id="max_heart_rate_achieved"></td>
       </tr>
       <tr>
         <th class="tbl">exercise_induced_angina</th>
@@ -83,12 +81,11 @@
       </tr>
       <tr>
         <th class="tbl">st_depression</th>
-        <td><input type="text" class="st_depression"></td>
+        <td><input type="text" id="st_depression"></td>
       </tr>
       <tr>
         <th class="tbl">st_slope_type</th>
         <td><select name="st_slope_type" id="st_slope_type">
-          <option>downsloping</option>
           <option>flat</option>
           <option>upsloping</option>
         </select>
@@ -96,7 +93,7 @@
       </tr>
       <tr>
         <th class="tbl">num_major_vessels</th>
-        <td><input type="text" class="num_major_vessels"></td>
+        <td><input type="text" id="num_major_vessels"></td>
       </tr>
       <tr>
         <th class="tbl">thalassemia_type</th>
@@ -115,6 +112,8 @@
     </table>
     <button id = "submit">Submit</button>
   </div>
+  <h1 style = "color: azure;">Prediction : </h1>
+  <h1 id = "prediction" style = "color: azure;"></h1>
 </body>
 
 </html>
