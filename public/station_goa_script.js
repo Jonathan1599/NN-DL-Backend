@@ -101,7 +101,7 @@ btn.addEventListener("click", () => {
   else 
     post_obj.thalassemia_type_reversable_defect = 1;
   console.log(post_obj)
-  fetch("http://localhost:3002/uci", {
+  fetch("http://3.130.18.167:3002/uci", {
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
