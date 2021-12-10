@@ -112,6 +112,17 @@
     </table>
     <button id = "submit">Submit</button>
   </div>
+  <div style = "margin-left: 50%;">
+    <h3 style = "color: azure;">Upload csv</h3>
+    <form action="/upload_csv" enctype="multipart/form-data" method="post">
+    <input type="file" id="input" name="input_data">
+    <button id = "upload-btn">Upload</button>
+ 
+  </form>
+  </div>
+  <form action="/data">
+  <button id = "data" style = "margin-left : 50%;">Get data</button>
+</form>
   <h1 style = "color: azure;">Prediction : </h1>
   <h1 id = "prediction" style = "color: azure;"></h1>
 </body>

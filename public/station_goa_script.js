@@ -124,6 +124,23 @@ btn.addEventListener("click", () => {
 .catch(function(res){ console.log(res) })
 })
 
+const get_data = document.getElementById("data");
+get_data.addEventListener("click", () => {
+  fetch("http://localhost:3000/data", {
+  
+    method: "POST"
+
+})
+.then(function(res){ 
+  console.log(res)
+  })
+  
+.catch(function(res){ console.log(res) });
+
+})
+
+
+
 let socket = io.connect("http://3.130.18.167:9000");
 
 socket.on("data", (data) => {
